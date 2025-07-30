@@ -12,11 +12,11 @@ const Footer = () => {
               <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
                 <Code className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">TechSolutions</span>
+              <span className="text-xl font-bold">COFOMO TECH</span>
             </Link>
             <p className="text-white/80 mb-4 max-w-md">
-              Leading IT solutions provider based in Hyderabad, India. We deliver innovative 
-              technology solutions that drive business growth and digital transformation.
+              Empowering digital innovation and business performance. From strategic consulting 
+              to professional services, we are here for you every step of the way.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -25,11 +25,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 40 1234 5678</span>
+                <span className="text-sm">+91 79896 73113</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">info@techsolutions.com</span>
+                <span className="text-sm">info@cofomotech.com</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-white/80 text-sm">
-            © 2024 TechSolutions. All rights reserved. | 25+ Clients Served | 40+ Projects Delivered
+            © 2024 Cofomo Tech. All rights reserved. | 25+ Clients Served | 40+ Projects Delivered
           </p>
         </div>
       </div>

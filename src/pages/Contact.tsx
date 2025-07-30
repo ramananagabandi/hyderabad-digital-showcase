@@ -80,7 +80,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    TechSolutions Pvt Ltd<br />
+                    Cofomo Tech Pvt Ltd<br />
                     Plot No. 123, Hi-Tech City<br />
                     Madhapur, Hyderabad<br />
                     Telangana 500081, India
@@ -97,8 +97,8 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    +91 40 1234 5678<br />
-                    +91 98765 43210
+                    +91 79896 73113<br />
+                    +91 40 1234 5678
                   </p>
                 </CardContent>
               </Card>
@@ -112,8 +112,8 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    info@techsolutions.com<br />
-                    sales@techsolutions.com
+                    info@cofomotech.com<br />
+                    sales@cofomotech.com
                   </p>
                 </CardContent>
               </Card>
