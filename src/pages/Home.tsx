@@ -7,83 +7,62 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section - Cofomo style */}
-      <section className="relative py-20 bg-gradient-hero text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-white/5 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:40px_40px]"></div>
+      {/* Hero Section - Exact Cofomo Design */}
+      <section className="relative py-32 bg-gradient-hero text-white overflow-hidden min-h-[600px] flex items-center">
+        {/* Abstract flowing background */}
+        <div className="absolute inset-0">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{stopColor:"rgba(59, 130, 246, 0.3)", stopOpacity:1}} />
+                <stop offset="50%" style={{stopColor:"rgba(99, 102, 241, 0.2)", stopOpacity:1}} />
+                <stop offset="100%" style={{stopColor:"rgba(139, 92, 246, 0.1)", stopOpacity:1}} />
+              </linearGradient>
+            </defs>
+            <path d="M0,300 C200,200 400,400 600,300 C800,200 1000,400 1200,300 L1200,600 L0,600 Z" fill="url(#grad1)" opacity="0.6"/>
+            <path d="M0,350 C250,250 450,450 700,350 C950,250 1100,450 1200,350 L1200,600 L0,600 Z" fill="url(#grad1)" opacity="0.4"/>
+            <path d="M0,400 C300,300 500,500 800,400 C1000,300 1100,500 1200,400 L1200,600 L0,600 Z" fill="url(#grad1)" opacity="0.3"/>
+          </svg>
         </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                EMPOWERING DIGITAL
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-400">
-                  INNOVATION
-                </span>
+            <div className="max-w-2xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+                EMPOWERING DIGITAL INNOVATION
                 <br />
                 AND BUSINESS PERFORMANCE
               </h1>
-              <p className="text-xl text-white/90 mb-8 max-w-lg">
-                Cofomo Tech is a company dedicated to innovation and technological advancement. 
-                From strategic consulting, project delivery to professional services, we are here for you every step of the way.
+              <p className="text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
+                Cofomo is a Canadian company dedicated to innovation and 
+                technological advancement. From strategic consulting, 
+                project delivery to professional services, we are here for you 
+                every step of the way.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-accent shadow-glow hover:shadow-xl transition-all duration-300">
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-orange-400/20 blur-3xl rounded-full"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <Code className="w-12 h-12 text-accent mx-auto mb-3" />
-                    <h3 className="font-semibold">Development</h3>
-                  </div>
-                  <div className="text-center">
-                    <Cloud className="w-12 h-12 text-accent mx-auto mb-3" />
-                    <h3 className="font-semibold">Cloud Solutions</h3>
-                  </div>
-                  <div className="text-center">
-                    <Smartphone className="w-12 h-12 text-accent mx-auto mb-3" />
-                    <h3 className="font-semibold">Mobile Apps</h3>
-                  </div>
-                  <div className="text-center">
-                    <Database className="w-12 h-12 text-accent mx-auto mb-3" />
-                    <h3 className="font-semibold">Data Analytics</h3>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - Orange banner like Cofomo */}
+      {/* Stats Section - Exact Cofomo Orange Banner */}
       <section className="py-16 bg-gradient-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">25+</div>
-              <div className="text-lg opacity-90">Clients</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">3,000+</div>
+              <div className="text-lg font-medium">Experts</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">40+</div>
-              <div className="text-lg opacity-90">Projects</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">400+</div>
+              <div className="text-lg font-medium">Architects</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
-              <div className="text-lg opacity-90">Experts</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">300+</div>
+              <div className="text-lg font-medium">Institutional clients</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">5+</div>
-              <div className="text-lg opacity-90">Years Experience</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">30</div>
+              <div className="text-lg font-medium">Years in business</div>
             </div>
           </div>
         </div>
