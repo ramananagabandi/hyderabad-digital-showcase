@@ -2,108 +2,57 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  Code, Smartphone, Cloud, Database, Shield, Cog, 
-  Globe, Monitor, Cpu, Zap, ArrowRight, CheckCircle 
+  MessageSquare, 
+  Code, 
+  Settings, 
+  Database, 
+  BarChart3, 
+  Users,
+  ArrowRight,
+  Zap,
+  Cpu,
+  CheckCircle,
+  Globe
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
+      icon: MessageSquare,
+      title: "Consulting Services",
+      description: "Cutting-edge expertise in a variety of sectors, actionable recommendations, local know-how and understanding to support you in successfully completing your digital transformation projects.",
+      image: "/api/placeholder/400/300"
+    },
+    {
       icon: Code,
-      title: "Custom Software Development",
-      description: "Tailored software solutions built with modern technologies",
-      features: [
-        "Full-stack web applications",
-        "Enterprise software solutions",
-        "API development & integration",
-        "Legacy system modernization"
-      ],
-      technologies: ["React", "Node.js", "Python", "Java", ".NET"]
+      title: "Application Services and Solutions",
+      description: "Software development, business agility, agile development, and cloud modernization.",
+      image: "/api/placeholder/400/300"
     },
     {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications",
-      features: [
-        "iOS & Android native apps",
-        "React Native development",
-        "Flutter applications",
-        "Progressive Web Apps (PWA)"
-      ],
-      technologies: ["React Native", "Flutter", "iOS", "Android", "PWA"]
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services",
-      features: [
-        "Cloud migration strategy",
-        "Infrastructure as Code",
-        "DevOps & CI/CD",
-        "Cloud security & compliance"
-      ],
-      technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"]
+      icon: Settings,
+      title: "Technologies & Platforms",
+      description: "With our certified experts and centres of excellence, COFOMO TECH allows you to capitalize on world-class ecosystems to modernize your organization, and create scalable solutions.",
+      image: "/api/placeholder/400/300"
     },
     {
       icon: Database,
-      title: "Data Analytics & BI",
-      description: "Advanced data analytics and business intelligence",
-      features: [
-        "Data warehouse design",
-        "Real-time analytics",
-        "Machine learning models",
-        "Custom dashboards & reports"
-      ],
-      technologies: ["Python", "R", "Tableau", "Power BI", "SQL"]
+      title: "Managed Services",
+      description: "With our certified experts and centres of excellence, COFOMO TECH allows you to capitalize on world-class ecosystems to modernize your organization, and create scalable solutions.",
+      image: "/api/placeholder/400/300"
     },
     {
-      icon: Shield,
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security solutions for your business",
-      features: [
-        "Security audits & assessments",
-        "Vulnerability management",
-        "Identity & access management",
-        "Compliance consulting"
-      ],
-      technologies: ["SIEM", "Firewall", "VPN", "SSL/TLS", "OAuth"]
+      icon: BarChart3,
+      title: "Business Intelligence",
+      description: "Obtain the most value for your EDMA initiatives using proven approaches and industry best practices.",
+      image: "/api/placeholder/400/300"
     },
     {
-      icon: Cog,
-      title: "IT Consulting",
-      description: "Strategic IT consulting and digital transformation",
-      features: [
-        "Digital transformation strategy",
-        "Technology roadmap planning",
-        "Process optimization",
-        "Change management"
-      ],
-      technologies: ["ITIL", "Agile", "DevOps", "Lean", "Six Sigma"]
-    },
-    {
-      icon: Globe,
-      title: "Web Development",
-      description: "Modern, responsive, and scalable web solutions",
-      features: [
-        "Responsive web design",
-        "E-commerce platforms",
-        "Content management systems",
-        "Performance optimization"
-      ],
-      technologies: ["React", "Vue.js", "WordPress", "Shopify", "Magento"]
-    },
-    {
-      icon: Monitor,
-      title: "UI/UX Design",
-      description: "User-centered design for exceptional experiences",
-      features: [
-        "User research & analysis",
-        "Wireframing & prototyping",
-        "Visual design & branding",
-        "Usability testing"
-      ],
-      technologies: ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"]
+      icon: Users,
+      title: "Professional Services",
+      description: "Our knowledge, capability, and speed of delivery have earned us a reputation for excellence in talent management. As a leading Indian provider, we offer a variety of service models to meet your needs.",
+      image: "/api/placeholder/400/300"
     }
   ];
 
@@ -136,71 +85,60 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30">
-              Our Services
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive IT Solutions
-              <br />
-              for Your Business
-            </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              From custom software development to cloud solutions, we offer a full 
-              spectrum of IT services to help your business thrive in the digital age.
-            </p>
-          </div>
+      <section className="relative bg-gradient-to-br from-primary via-primary-light to-accent pt-24 pb-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            OUR SERVICES
+          </h1>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Solutions and services that ensure the success of your projects
+          </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-0 shadow-sm">
-                <CardHeader>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                      <CardDescription>{service.description}</CardDescription>
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              const isLeft = index % 2 === 0;
+              return (
+                <div key={index} className={`flex items-center gap-8 ${!isLeft ? 'flex-row-reverse' : ''}`}>
+                  <div className="flex-1">
+                    <Card className="group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
+                      <CardHeader className="pb-4">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="p-3 bg-gradient-to-br from-primary to-accent text-white rounded-lg group-hover:scale-110 transition-transform duration-300">
+                            <Icon className="w-6 h-6" />
+                          </div>
+                        </div>
+                        <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                          {service.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {service.description}
+                        </p>
+                        <button className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold">
+                          LEARN MORE 
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <div className="w-64 h-48 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
+                      <Icon className="w-16 h-16 text-primary" />
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                            <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {service.technologies.map((tech, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -242,7 +180,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Why Choose TechSolutions?
+                Why Choose COFOMO TECH?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -252,7 +190,7 @@ const Services = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Proven Expertise</h3>
                     <p className="text-muted-foreground">
-                      8+ years of experience delivering successful projects across various industries
+                      25+ years of experience delivering successful projects across various industries
                     </p>
                   </div>
                 </div>
@@ -317,24 +255,17 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Project?
+      <section className="py-20 bg-gradient-to-r from-primary via-primary-light to-accent">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss your requirements and create a solution that drives your business forward.
+          <p className="text-xl text-white/90 mb-8">
+            Let's discuss how our expertise can accelerate your digital transformation
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                Get Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              View Our Portfolio
-            </Button>
-          </div>
+          <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors text-lg">
+            Get in Touch
+          </button>
         </div>
       </section>
     </div>
