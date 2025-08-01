@@ -1,19 +1,43 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Code } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  const servicesDropdown = [
+    { name: "Consulting Services", path: "/services/consulting-services" },
+    { name: "Application Services & Solutions", path: "/services/application-services" },
+    { name: "Technologies & Platforms", path: "/services/technologies-platforms" },
+    { name: "Managed Services", path: "/services/managed-services" },
+    { name: "Professional Services", path: "/services/professional-services" },
+  ];
+
+  const industriesDropdown = [
+    { name: "Government", path: "/industries/government" },
+    { name: "Financial Services", path: "/industries/financial-services" },
+    { name: "Healthcare", path: "/industries/healthcare" },
+    { name: "Education", path: "/industries/education" },
+  ];
+
+  const aboutDropdown = [
+    { name: "Our Company", path: "/about/our-company" },
+    { name: "Leadership Team", path: "/about/leadership" },
+    { name: "Awards & Recognition", path: "/about/awards" },
+    { name: "Technology Partners", path: "/about/partners" },
+  ];
+
   const navItems = [
-    { name: "SERVICES", path: "/services" },
-    { name: "INDUSTRIES", path: "/industries" },
-    { name: "TECHNOLOGIES", path: "/technologies" },
     { name: "CAREERS", path: "/careers" },
     { name: "INSIGHTS", path: "/insights" },
-    { name: "ABOUT", path: "/about" },
     { name: "CONTACT US", path: "/contact" },
   ];
 
@@ -29,6 +53,63 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1">
+                SERVICES <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white">
+                {servicesDropdown.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.path} className="text-primary hover:text-primary/80">
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Industries Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1">
+                INDUSTRIES <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white">
+                {industriesDropdown.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.path} className="text-primary hover:text-primary/80">
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link
+              to="/technologies"
+              className={`text-sm font-medium transition-colors hover:text-white/80 ${
+                isActive("/technologies") ? "text-white" : "text-white/90"
+              }`}
+            >
+              TECHNOLOGIES
+            </Link>
+
+            {/* About Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1">
+                ABOUT <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white">
+                {aboutDropdown.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.path} className="text-primary hover:text-primary/80">
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {navItems.map((item) => (
               <Link
                 key={item.name}
