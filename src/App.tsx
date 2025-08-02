@@ -19,6 +19,9 @@ import NotFound from "./pages/NotFound";
 import ConsultingServices from "./pages/services/ConsultingServices";
 import ApplicationServices from "./pages/services/ApplicationServices";
 import OurCompany from "./pages/about/OurCompany";
+import Healthcare from "./pages/industries/Healthcare";
+import Insurance from "./pages/industries/Insurance";
+import Finance from "./pages/industries/Finance";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +40,9 @@ const App = () => (
           <Route path="/services/consulting-services" element={<ConsultingServices />} />
           <Route path="/services/application-services" element={<ApplicationServices />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/healthcare" element={<Healthcare />} />
+          <Route path="/industries/insurance" element={<Insurance />} />
+          <Route path="/industries/finance" element={<Finance />} />
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/careers" element={<Careers />} />

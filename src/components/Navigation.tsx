@@ -22,10 +22,15 @@ const Navigation = () => {
   ];
 
   const industriesDropdown = [
-    { name: "Government", path: "/industries/government" },
-    { name: "Financial Services", path: "/industries/financial-services" },
     { name: "Healthcare", path: "/industries/healthcare" },
-    { name: "Education", path: "/industries/education" },
+    { name: "Insurance", path: "/industries/insurance" },
+    { name: "Finance", path: "/industries/finance" },
+    { name: "Municipalities", path: "/industries/municipalities" },
+    { name: "Transportation", path: "/industries/transportation" },
+    { name: "Public Services", path: "/industries/public-services" },
+    { name: "Government", path: "/industries/government" },
+    { name: "Telecommunications", path: "/industries/telecommunications" },
+    { name: "Manufacturing", path: "/industries/manufacturing" },
   ];
 
   const aboutDropdown = [
