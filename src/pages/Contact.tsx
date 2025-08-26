@@ -91,28 +91,13 @@ const Contact = () => {
               <Card className="shadow-card border-0">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle>Phone</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    +91 79896 73113<br />
-                    +91 40 1234 5678
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card border-0">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <CardTitle>Email</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    info@cofomotech.com<br />
+                    info@cofomo.in<br />
                   </p>
                 </CardContent>
               </Card>
