@@ -97,7 +97,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    info@cofomotech.com<br />
+                    info@cofomo.in<br />
                   </p>
                 </CardContent>
               </Card>
