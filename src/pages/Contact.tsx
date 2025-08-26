@@ -4,10 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <div className="min-h-screen pt-16">
+  return <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,18 +87,8 @@ const Contact = () => {
               </Card>
 
               <Card className="shadow-card border-0">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle>Phone</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    +91 79896 73113<br />
-                    +91 40 1234 5678
-                  </p>
-                </CardContent>
+                
+                
               </Card>
 
               <Card className="shadow-card border-0">
@@ -137,8 +125,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;

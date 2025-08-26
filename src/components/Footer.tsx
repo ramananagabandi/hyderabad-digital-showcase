@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Code, Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-br from-primary to-accent text-primary-foreground">
+  return <footer className="bg-gradient-to-br from-primary to-accent text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -29,7 +27,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">info@cofomotech.com</span>
+                <span className="text-sm">support@cofomotech.com</span>
               </div>
             </div>
           </div>
@@ -87,8 +85,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
