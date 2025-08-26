@@ -22,12 +22,8 @@ const Footer = () => {
                 <span className="text-sm">Hyderabad, Telangana, India</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 79896 73113</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">support@cofomotech.com</span>
+                <span className="text-sm">info@cofomo.in</span>
               </div>
             </div>
           </div>
