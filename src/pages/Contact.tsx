@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+
 const Contact = () => {
-  return <div className="min-h-screen pt-16">
+  return (
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +81,7 @@ const Contact = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                     Cofomo Tech Pvt Ltd<br />
-                    Plot No. 123, Hi-Tech City<br />
+                    100 Feet Road, Hi-Tech City<br />
                     Madhapur, Hyderabad<br />
                     Telangana 500081, India
                   </p>
@@ -87,8 +89,18 @@ const Contact = () => {
               </Card>
 
               <Card className="shadow-card border-0">
-                
-                
+                <CardHeader>
+                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <CardTitle>Phone</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    +91 79896 73113<br />
+                    +91 40 1234 5678
+                  </p>
+                </CardContent>
               </Card>
 
               <Card className="shadow-card border-0">
@@ -101,7 +113,6 @@ const Contact = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                     info@cofomotech.com<br />
-                    sales@cofomotech.com
                   </p>
                 </CardContent>
               </Card>
@@ -116,8 +127,22 @@ const Contact = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                     Monday - Friday: 9:00 AM - 6:00 PM<br />
-                    Saturday: 10:00 AM - 4:00 PM<br />
+                    Saturday: Closed
                     Sunday: Closed
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card border-0">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div>
+                  <CardTitle>Verify Your Offer</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    support@cofomo.in<br />
                   </p>
                 </CardContent>
               </Card>
@@ -125,6 +150,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;
