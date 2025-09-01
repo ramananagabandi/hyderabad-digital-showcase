@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 22% 22%;
 
-    --primary: 220 85% 25%;
+    --primary: 240 100% 60%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 85% 25%;
+    --secondary: 250 85% 70%;
+    --secondary-foreground: 240 100% 15%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 245 20% 95%;
+    --muted-foreground: 240 15% 50%;
 
-    --accent: 15 100% 55%;
+    --accent: 260 80% 55%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,15 +38,15 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Cofomo-inspired design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(220, 85%, 25%), hsl(220, 85%, 35%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220, 14%, 96%), hsl(0, 0%, 100%));
-    --gradient-hero: linear-gradient(135deg, hsl(220, 85%, 15%) 0%, hsl(220, 85%, 25%) 50%, hsl(220, 85%, 35%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(15, 100%, 55%), hsl(15, 100%, 65%));
+    /* COFOMO Tech logo-inspired design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(240, 100%, 60%), hsl(260, 80%, 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(245, 20%, 95%), hsl(0, 0%, 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(240, 100%, 40%) 0%, hsl(250, 90%, 50%) 50%, hsl(260, 80%, 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(250, 85%, 70%), hsl(260, 80%, 55%));
     
-    --shadow-elegant: 0 10px 30px -10px hsl(220, 85%, 25%, 0.3);
-    --shadow-card: 0 4px 20px -8px hsl(220, 85%, 25%, 0.15);
-    --shadow-glow: 0 0 40px hsl(220, 85%, 35%, 0.4);
+    --shadow-elegant: 0 10px 30px -10px hsl(240, 100%, 60%, 0.3);
+    --shadow-card: 0 4px 20px -8px hsl(240, 100%, 60%, 0.15);
+    --shadow-glow: 0 0 40px hsl(250, 85%, 70%, 0.4);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 

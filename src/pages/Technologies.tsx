@@ -94,7 +94,7 @@ const Technologies = () => {
             Technologies & Platforms
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            With our certified experts and centres of excellence, COFOMO TECH allows you to capitalize on world-class ecosystems to modernize your organization
+            With our certified experts and centres of excellence, COFOMO Tech allows you to capitalize on world-class ecosystems to modernize your organization
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {certifications.map((cert) => (

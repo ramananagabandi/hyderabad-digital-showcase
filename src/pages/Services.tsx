@@ -33,13 +33,13 @@ const Services = () => {
     {
       icon: Settings,
       title: "Technologies & Platforms",
-      description: "With our certified experts and centres of excellence, COFOMO TECH allows you to capitalize on world-class ecosystems to modernize your organization, and create scalable solutions.",
+      description: "With our certified experts and centres of excellence, COFOMO Tech allows you to capitalize on world-class ecosystems to modernize your organization, and create scalable solutions.",
       image: "/api/placeholder/400/300"
     },
     {
       icon: Database,
       title: "Managed Services",
-      description: "With our certified experts and centres of excellence, COFOMO TECH allows you to capitalize on world-class ecosystems to modernize your organization, and create scalable solutions.",
+      description: "With our certified experts and centres of excellence, COFOMO Tech allows you to capitalize on world-class ecosystems to modernize your organization, and create scalable solutions.",
       image: "/api/placeholder/400/300"
     },
     {
@@ -180,7 +180,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Why Choose COFOMO TECH?
+                Why Choose COFOMO Tech?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">

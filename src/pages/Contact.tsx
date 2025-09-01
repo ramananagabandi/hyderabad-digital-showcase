@@ -21,7 +21,7 @@ const Contact = () => {
               Digital Journey
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Ready to transform your business? Contact our team in Hyderabad for a free consultation 
+              Ready to transform your business? Contact our team in Mumbai for a free consultation 
               and discover how we can help you achieve your goals.
             </p>
           </div>
@@ -80,10 +80,9 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Cofomo Tech Pvt Ltd<br />
-                    100 Feet Road, Hi-Tech City<br />
-                    Madhapur, Hyderabad<br />
-                    Telangana 500081, India
+                  COFOMO Tech Pvt Ltd<br />
+                  Mumbai, Maharashtra 400001<br />
+                  India
                   </p>
                 </CardContent>
               </Card>
@@ -97,7 +96,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    info@cofomo.in<br />
+                    info@cofomotech.in<br />
                   </p>
                 </CardContent>
               </Card>
@@ -127,7 +126,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    support@cofomo.in<br />
+                    support@cofomotech.in<br />
                   </p>
                 </CardContent>
               </Card>

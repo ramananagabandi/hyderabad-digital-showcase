@@ -11,7 +11,7 @@ const Industries = () => {
       title: "HEALTH",
       path: "/industries/healthcare",
       description: "We are proud to support health organizations in the development of digital solutions that various healthcare stakeholders can leverage to improve their workflow, communications and patient care across the entire care continuum.",
-      details: "For the past several years, Cofomo has been helping multiple health healthcare institutions with the planning, optimisation and migration of their IT infrastructure and supported several innovative projects.",
+      details: "For the past several years, COFOMO Tech has been helping multiple health healthcare institutions with the planning, optimisation and migration of their IT infrastructure and supported several innovative projects.",
       highlights: ["HIPAA Compliance", "Electronic Health Records", "Telemedicine Solutions"],
       image: "https://www.cofomo.com/wp-content/uploads/2024/06/Section-Industries-Sante.png"
     },
@@ -73,7 +73,7 @@ const Industries = () => {
       icon: Wifi,
       title: "TELECOMMUNICATIONS",
       path: "/industries/telecommunications",
-      description: "Cofomo supports several major players in the communications sector in Quebec.",
+      description: "COFOMO Tech supports several major players in the communications sector globally.",
       details: "From telecommunications and Internet services to television broadcasting, our experts have been involved in a multitude of large-scale projects that have changed the way people consume information and entertainment.",
       highlights: ["Broadcasting", "Internet Services", "Mobile Solutions"],
       image: "https://www.cofomo.com/wp-content/uploads/2024/06/Section-Industries-Telecommunication.png"
@@ -82,7 +82,7 @@ const Industries = () => {
       icon: Factory,
       title: "MANUFACTURING",
       path: "/industries/manufacturing",
-      description: "Over the past several years, Cofomo has provided consulting services as well as transformation and innovation solutions to major players in the manufacturing sector.",
+      description: "Over the past several years, COFOMO Tech has provided consulting services as well as transformation and innovation solutions to major players in the manufacturing sector.",
       details: "We've implemented cutting-edge technologies, overseen the integration of software, and developed bespoke solutions adapted to the client context and environment.",
       highlights: ["Process Optimization", "Integration Solutions", "Innovation"],
       image: "https://www.cofomo.com/wp-content/uploads/2024/06/Section-Industries-Manufacturing-1.png"

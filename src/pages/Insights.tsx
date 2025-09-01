@@ -6,7 +6,7 @@ const Insights = () => {
   const featuredArticle = {
     title: "The Future of Digital Transformation in Indian Enterprises",
     excerpt: "Exploring how Indian companies are leveraging cutting-edge technologies to drive innovation and compete in the global market.",
-    author: "COFOMO TECH Research Team",
+    author: "COFOMO Tech Research Team",
     date: "July 25, 2025",
     readTime: "8 min read",
     category: "Digital Transformation",

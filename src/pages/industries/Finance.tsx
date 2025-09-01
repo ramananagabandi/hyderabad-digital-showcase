@@ -69,7 +69,7 @@ const Finance = () => {
                 We work to accelerate their complex digital transformations in ways that emphasize security and complete compatibility with existing systems.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                None of that would be possible without our in-depth knowledge of the technology of today and of tomorrow. Add to it our expertise and experience and it adds up to one thing: Cofomo.
+                None of that would be possible without our in-depth knowledge of the technology of today and of tomorrow. Add to it our expertise and experience and it adds up to one thing: COFOMO Tech.
               </p>
               <div className="flex gap-4">
                 <Button className="bg-primary hover:bg-primary/90">
@@ -172,7 +172,7 @@ const Finance = () => {
           <blockquote className="text-2xl italic mb-6">
             "Our in-depth knowledge of the technology of today and of tomorrow, combined with our expertise and experience, makes us the ideal partner for financial institutions."
           </blockquote>
-          <cite className="text-lg font-bold text-primary">Cofomo Financial Services Team</cite>
+          <cite className="text-lg font-bold text-primary">COFOMO Tech Financial Services Team</cite>
         </div>
       </section>
 

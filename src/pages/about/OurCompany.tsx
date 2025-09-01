@@ -12,7 +12,7 @@ const OurCompany = () => {
               Our Company
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Founded in 1995, COFOMO TECH is a Canadian leader in IT and business consulting services, dedicated to innovation and technological advancement.
+              Founded in 2010, COFOMO Tech is an Indian leader in IT and business consulting services, dedicated to innovation and technological advancement.
             </p>
             <Button variant="secondary" size="lg" className="bg-accent text-primary hover:bg-accent/90">
               Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -95,7 +95,7 @@ const OurCompany = () => {
               <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2">Company Founded</h3>
                 <p className="text-muted-foreground">
-                  COFOMO TECH was established with a vision to provide innovative IT consulting services to Canadian businesses.
+                  COFOMO Tech was established with a vision to provide innovative IT consulting services to Indian businesses.
                 </p>
               </div>
             </div>
