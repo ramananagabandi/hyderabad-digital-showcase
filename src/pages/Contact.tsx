@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+
 const Contact = () => {
-  return <div className="min-h-screen pt-16">
+  return (
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +20,10 @@ const Contact = () => {
               <br />
               Digital Journey
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">Ready to transform your business? Contact our team for a free consultation and discover how we can help you achieve your goals.</p>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Ready to transform your business? Contact our team for a free consultation 
+              and discover how we can help you achieve your goals.
+            </p>
           </div>
         </div>
       </section>
@@ -76,7 +81,7 @@ const Contact = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                   COFOMO Tech Pvt Ltd<br />
-                  Mumbai, Maharashtra 400001<br />
+                  Hyderabad, Telangana 500081<br />
                   India
                   </p>
                 </CardContent>
@@ -91,7 +96,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    info@cofomotech.in<br />
+                    info@cofomotech.com<br />
                   </p>
                 </CardContent>
               </Card>
@@ -121,7 +126,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    support@cofomotech.in<br />
+                    support@cofomotech.com<br />
                   </p>
                 </CardContent>
               </Card>
@@ -129,6 +134,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;
