@@ -3,61 +3,54 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, Trophy, Clock, Shield, Code, Smartphone, Cloud, CheckCircle, Star, Zap, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import cofomoTechLogo from "@/assets/cofomo-tech-logo.png";
-
 const Index = () => {
-  const stats = [
-    { number: "50+", label: "Tech Experts" },
-    { number: "15+", label: "Solution Architects" },
-    { number: "100+", label: "Clients Worldwide" },
-    { number: "8+", label: "Years of Excellence" }
-  ];
-
-  const services = [
-    {
-      icon: <Code className="w-12 h-12 text-primary" />,
-      title: "Custom Software Development",
-      description: "Tailored software solutions built with cutting-edge technologies to drive your business forward.",
-      link: "/services/application-services"
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-primary" />,
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences across all devices.",
-      link: "/services/application-services"
-    },
-    {
-      icon: <Cloud className="w-12 h-12 text-primary" />,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services to optimize your business operations.",
-      link: "/services/consulting-services"
-    }
-  ];
-
-  const whyChoose = [
-    {
-      icon: <Users className="w-8 h-8 text-accent" />,
-      title: "Expert Team",
-      description: "Certified professionals with deep industry expertise and proven track records."
-    },
-    {
-      icon: <Trophy className="w-8 h-8 text-accent" />,
-      title: "Results-Driven",
-      description: "We focus on delivering measurable outcomes that drive real business value."
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-accent" />,
-      title: "Fast Delivery",
-      description: "Agile methodologies ensure quick turnaround times without compromising quality."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-accent" />,
-      title: "Secure Solutions",
-      description: "Enterprise-grade security and compliance built into every solution we deliver."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const stats = [{
+    number: "50+",
+    label: "Tech Experts"
+  }, {
+    number: "15+",
+    label: "Solution Architects"
+  }, {
+    number: "100+",
+    label: "Clients Worldwide"
+  }, {
+    number: "8+",
+    label: "Years of Excellence"
+  }];
+  const services = [{
+    icon: <Code className="w-12 h-12 text-primary" />,
+    title: "Custom Software Development",
+    description: "Tailored software solutions built with cutting-edge technologies to drive your business forward.",
+    link: "/services/application-services"
+  }, {
+    icon: <Smartphone className="w-12 h-12 text-primary" />,
+    title: "Mobile Applications",
+    description: "Native and cross-platform mobile apps that deliver exceptional user experiences across all devices.",
+    link: "/services/application-services"
+  }, {
+    icon: <Cloud className="w-12 h-12 text-primary" />,
+    title: "Cloud Solutions",
+    description: "Scalable cloud infrastructure and migration services to optimize your business operations.",
+    link: "/services/consulting-services"
+  }];
+  const whyChoose = [{
+    icon: <Users className="w-8 h-8 text-accent" />,
+    title: "Expert Team",
+    description: "Certified professionals with deep industry expertise and proven track records."
+  }, {
+    icon: <Trophy className="w-8 h-8 text-accent" />,
+    title: "Results-Driven",
+    description: "We focus on delivering measurable outcomes that drive real business value."
+  }, {
+    icon: <Clock className="w-8 h-8 text-accent" />,
+    title: "Fast Delivery",
+    description: "Agile methodologies ensure quick turnaround times without compromising quality."
+  }, {
+    icon: <Shield className="w-8 h-8 text-accent" />,
+    title: "Secure Solutions",
+    description: "Enterprise-grade security and compliance built into every solution we deliver."
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
@@ -65,11 +58,7 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <div className="flex justify-center mb-8 animate-scale-in">
-              <img 
-                src={cofomoTechLogo} 
-                alt="COFOMO Tech Logo" 
-                className="w-24 h-24 object-contain drop-shadow-lg"
-              />
+              
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
               EMPOWERING DIGITAL
@@ -102,16 +91,14 @@ const Index = () => {
       <section className="py-16 bg-gradient-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+            {stats.map((stat, index) => <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
                 <div className="text-muted-foreground font-medium">
                   {stat.label}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -129,8 +116,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-500 border-0 shadow-card hover:scale-[1.02] animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+            {services.map((service, index) => <Card key={index} className="group hover:shadow-elegant transition-all duration-500 border-0 shadow-card hover:scale-[1.02] animate-fade-in" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardContent className="p-8 text-center">
                   <div className="flex justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                     {service.icon}
@@ -141,16 +129,12 @@ const Index = () => {
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  <Link 
-                    to={service.link}
-                    className="inline-flex items-center text-primary hover:text-primary/80 transition-all duration-300 font-semibold group-hover:translate-x-1"
-                  >
+                  <Link to={service.link} className="inline-flex items-center text-primary hover:text-primary/80 transition-all duration-300 font-semibold group-hover:translate-x-1">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -169,8 +153,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChoose.map((item, index) => (
-              <div key={index} className="text-center">
+            {whyChoose.map((item, index) => <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
                     {item.icon}
@@ -182,8 +165,7 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -209,8 +191,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
