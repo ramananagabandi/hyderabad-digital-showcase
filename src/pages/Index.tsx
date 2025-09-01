@@ -185,7 +185,7 @@ const Index = () => {
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-blue-600">
               Learn About Us
             </Button>
           </div>
