@@ -81,7 +81,7 @@ const Contact = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                   COFOMO Tech Pvt Ltd<br />
-                  Mumbai, Maharashtra 400001<br />
+                  Hyderabad, Telangana 500081<br />
                   India
                   </p>
                 </CardContent>
@@ -96,7 +96,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    info@cofomotech.in<br />
+                    info@cofomotech.com<br />
                   </p>
                 </CardContent>
               </Card>
@@ -126,7 +126,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    support@cofomotech.in<br />
+                    support@cofomotech.com<br />
                   </p>
                 </CardContent>
               </Card>
