@@ -63,34 +63,34 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-8">
+          <div className="text-center animate-fade-in">
+            <div className="flex justify-center mb-8 animate-scale-in">
               <img 
                 src={cofomoTechLogo} 
                 alt="COFOMO Tech Logo" 
-                className="w-24 h-24 object-contain"
+                className="w-24 h-24 object-contain drop-shadow-lg"
               />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
               EMPOWERING DIGITAL
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/90 to-blue-100">
                 INNOVATION
               </span>
               <br />
               AND BUSINESS PERFORMANCE
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up">
               COFOMO Tech delivers cutting-edge technology solutions that transform businesses. 
               From strategic consulting to professional services, we are your trusted partner 
               in digital transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-glow">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/95 shadow-elegant transition-all duration-300 hover:scale-105">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 transition-all duration-300">
                 Learn About Us
               </Button>
             </div>
@@ -130,9 +130,9 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-2 hover:border-primary/20">
+              <Card key={index} className="group hover:shadow-elegant transition-all duration-500 border-0 shadow-card hover:scale-[1.02] animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-8 text-center">
-                  <div className="flex justify-center mb-6">
+                  <div className="flex justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-4">
@@ -143,10 +143,10 @@ const Index = () => {
                   </p>
                   <Link 
                     to={service.link}
-                    className="inline-flex items-center text-primary hover:text-accent transition-colors font-semibold"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-all duration-300 font-semibold group-hover:translate-x-1"
                   >
                     Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
               </Card>
