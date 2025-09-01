@@ -5,10 +5,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
+        <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/6ba3930e-5fd6-4082-a15b-f106c39a5bff.png" 
+                  alt="Cofomo Tech Logo" 
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
               </div>
               <span className="text-xl font-bold">COFOMO Tech</span>
             </Link>
