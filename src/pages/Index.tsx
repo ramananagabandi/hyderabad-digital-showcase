@@ -75,13 +75,17 @@ const Index = () => {
               in digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/95 shadow-elegant transition-all duration-300 hover:scale-105">
-                Start Your Project
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/95 shadow-elegant transition-all duration-300 hover:scale-105 ">
-                Learn About Us
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/95 shadow-elegant transition-all duration-300 hover:scale-105">
+                  Start Your Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/95 shadow-elegant transition-all duration-300 hover:scale-105">
+                  Learn About Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -181,13 +185,17 @@ const Index = () => {
             innovative technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-glow">
-              Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/100 text-blue-600">
-              Learn About Us
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-glow">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/100 text-blue-600">
+                Learn About Us
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

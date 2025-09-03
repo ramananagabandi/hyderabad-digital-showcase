@@ -6,14 +6,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
         <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <Link to="/" className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/6ba3930e-5fd6-4082-a15b-f106c39a5bff.png" 
+                  src="/lovable-uploads/6ca34434-3564-40a1-b874-3854639d51c6.png" 
                   alt="Cofomo Tech Logo" 
                   className="w-10 h-10 object-contain"
                 />
-              </div>
               </div>
               <span className="text-xl font-bold">COFOMO Tech</span>
             </Link>

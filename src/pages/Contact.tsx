@@ -1,11 +1,78 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Create email body
+      const emailBody = `
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+      `;
+
+      // Create mailto link
+      const mailtoLink = `mailto:support@cofomotech.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Email Ready",
+        description: "Your email client will open with the message ready to send.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error processing your request. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -36,36 +103,81 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl">Send us a Message</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">First Name</label>
-                    <Input placeholder="Your first name" />
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">First Name</label>
+                      <Input 
+                        name="firstName"
+                        placeholder="Your first name" 
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Last Name</label>
+                      <Input 
+                        name="lastName"
+                        placeholder="Your last name" 
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Last Name</label>
-                    <Input placeholder="Your last name" />
+                    <label className="text-sm font-medium mb-2 block">Email</label>
+                    <Input 
+                      name="email"
+                      type="email" 
+                      placeholder="your.email@example.com" 
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input type="email" placeholder="your.email@example.com" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Phone</label>
-                  <Input placeholder="+91 98765 43210" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Subject</label>
-                  <Input placeholder="How can we help you?" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Message</label>
-                  <Textarea placeholder="Tell us about your project..." rows={6} />
-                </div>
-                <Button className="w-full bg-gradient-primary shadow-elegant">
-                  Send Message <Send className="ml-2 w-4 h-4" />
-                </Button>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Phone</label>
+                    <Input 
+                      name="phone"
+                      placeholder="+91 98765 43210" 
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Subject</label>
+                    <Input 
+                      name="subject"
+                      placeholder="How can we help you?" 
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Message</label>
+                    <Textarea 
+                      name="message"
+                      placeholder="Tell us about your project..." 
+                      rows={6} 
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-primary shadow-elegant"
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"} 
+                    <Send className="ml-2 w-4 h-4" />
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 

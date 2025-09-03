@@ -124,10 +124,13 @@ const Services = () => {
                         <p className="text-muted-foreground leading-relaxed">
                           {service.description}
                         </p>
-                        <button className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold">
+                        <Link 
+                          to={service.title === "Consulting Services" ? "/services/consulting-services" : "/services/application-services"} 
+                          className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+                        >
                           LEARN MORE 
                           <ArrowRight className="w-4 h-4" />
-                        </button>
+                        </Link>
                       </CardContent>
                     </Card>
                   </div>
@@ -263,9 +266,11 @@ const Services = () => {
           <p className="text-xl text-white/90 mb-8">
             Let's discuss how our expertise can accelerate your digital transformation
           </p>
-          <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors text-lg">
-            Get in Touch
-          </button>
+          <Link to="/contact">
+            <Button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors text-lg">
+              Get in Touch
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
