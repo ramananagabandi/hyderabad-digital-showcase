@@ -74,7 +74,7 @@ const Navigation = () => {
     path: "/contact"
   }];
   const isActive = (path: string) => location.pathname === path;
-  return <nav className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm border-b border-white/10 z-50">
+  return <nav className="fixed top-0 w-full bg-white backdrop-blur-sm border-b border-gray-200 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
@@ -83,14 +83,14 @@ const Navigation = () => {
               alt="COFOMO Tech Logo" 
               className="h-8 w-auto"
             />
-            <span className="text-2xl font-bold text-white tracking-wider">COFOMO Tech</span>
+            <span className="text-2xl font-bold text-primary tracking-wider">COFOMO Tech</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {/* Services Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1">
+              <DropdownMenuTrigger className="text-sm font-medium text-primary/90 hover:text-primary flex items-center gap-1">
                 SERVICES <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-white">
@@ -104,7 +104,7 @@ const Navigation = () => {
 
             {/* Industries Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1">
+              <DropdownMenuTrigger className="text-sm font-medium text-primary/90 hover:text-primary flex items-center gap-1">
                 INDUSTRIES <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-white">
@@ -116,13 +116,13 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link to="/technologies" className={`text-sm font-medium transition-colors hover:text-white/80 ${isActive("/technologies") ? "text-white" : "text-white/90"}`}>
+            <Link to="/technologies" className={`text-sm font-medium transition-colors hover:text-primary/80 ${isActive("/technologies") ? "text-primary" : "text-primary/90"}`}>
               TECHNOLOGIES
             </Link>
 
             {/* About Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1">
+              <DropdownMenuTrigger className="text-sm font-medium text-primary/90 hover:text-primary flex items-center gap-1">
                 ABOUT <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-white">
@@ -134,11 +134,11 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navItems.map(item => <Link key={item.name} to={item.path} className={`text-sm font-medium transition-colors hover:text-white/80 ${isActive(item.path) ? "text-white" : "text-white/90"}`}>
+            {navItems.map(item => <Link key={item.name} to={item.path} className={`text-sm font-medium transition-colors hover:text-primary/80 ${isActive(item.path) ? "text-primary" : "text-primary/90"}`}>
                 {item.name}
               </Link>)}
             <div className="flex items-center space-x-4">
-              <button className="text-white/90 hover:text-white">
+              <button className="text-primary/90 hover:text-primary">
                 <Menu className="w-5 h-5" />
               </button>
               
@@ -147,7 +147,7 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-white">
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-primary">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
@@ -155,8 +155,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary border-t border-white/10">
-              {navItems.map(item => <Link key={item.name} to={item.path} className={`block px-3 py-2 text-base font-medium transition-colors hover:text-white/80 ${isActive(item.path) ? "text-white" : "text-white/90"}`} onClick={() => setIsOpen(false)}>
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+              {navItems.map(item => <Link key={item.name} to={item.path} className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary/80 ${isActive(item.path) ? "text-primary" : "text-primary/90"}`} onClick={() => setIsOpen(false)}>
                   {item.name}
                 </Link>)}
             </div>
