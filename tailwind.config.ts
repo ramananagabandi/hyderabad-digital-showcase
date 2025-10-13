@@ -75,12 +75,14 @@ export default {
 			'gradient-accent': 'var(--gradient-accent)',
 			'gradient-dark': 'var(--gradient-dark)',
 			'gradient-card': 'var(--gradient-card)',
+			'gradient-mesh': 'var(--gradient-mesh)',
 		},
 		boxShadow: {
 			'elegant': 'var(--shadow-elegant)',
 			'card': 'var(--shadow-card)',
 			'glow': 'var(--shadow-glow)',
 			'hover': 'var(--shadow-hover)',
+			'xl': 'var(--shadow-xl)',
 		},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
