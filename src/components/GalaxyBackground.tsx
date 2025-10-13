@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Stars, Sphere } from '@react-three/drei';
+import { Stars } from '@react-three/drei';
 import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 
@@ -15,7 +15,8 @@ function FloatingOrb({ position, color, size = 1 }: { position: [number, number,
   });
 
   return (
-    <Sphere ref={meshRef} position={position} args={[size, 32, 32]}>
+    <mesh ref={meshRef} position={position}>
+      <sphereGeometry args={[size, 32, 32]} />
       <meshStandardMaterial 
         color={color} 
         emissive={color}
@@ -23,7 +24,7 @@ function FloatingOrb({ position, color, size = 1 }: { position: [number, number,
         transparent
         opacity={0.6}
       />
-    </Sphere>
+    </mesh>
   );
 }
 
