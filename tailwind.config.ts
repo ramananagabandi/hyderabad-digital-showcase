@@ -68,17 +68,20 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-accent': 'var(--gradient-accent)',
-			},
-			boxShadow: {
-				'elegant': 'var(--shadow-elegant)',
-				'card': 'var(--shadow-card)',
-				'glow': 'var(--shadow-glow)',
-			},
+		backgroundImage: {
+			'gradient-primary': 'var(--gradient-primary)',
+			'gradient-secondary': 'var(--gradient-secondary)',
+			'gradient-hero': 'var(--gradient-hero)',
+			'gradient-accent': 'var(--gradient-accent)',
+			'gradient-dark': 'var(--gradient-dark)',
+			'gradient-card': 'var(--gradient-card)',
+		},
+		boxShadow: {
+			'elegant': 'var(--shadow-elegant)',
+			'card': 'var(--shadow-card)',
+			'glow': 'var(--shadow-glow)',
+			'hover': 'var(--shadow-hover)',
+		},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
 			},
