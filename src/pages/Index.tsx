@@ -59,19 +59,19 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/40 backdrop-blur-md border border-black/10 mb-8 animate-fade-in shadow-lg">
             <Sparkles className="w-5 h-5 text-black" />
-            <span className="text-sm font-semibold text-black tracking-wide">Cofomo Tech - Building Innovation Since 2023</span>
+            <span className="text-sm font-semibold text-black tracking-wide">Cofomo Tech - A Startup Building Next-Gen Solutions</span>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight animate-slide-up">
-            <span className="text-black">Cofomo Tech</span>
+            <span className="text-black">Build The</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-600 to-black">
-              Your Startup Partner
+              Future Now
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
-            For the past 2 years, we've been crafting powerful digital solutions that transform startups and create lasting impact. 
+            As a startup founded 2 years ago, we craft powerful digital solutions that transform businesses and create lasting impact. 
             Partner with Cofomo Tech to turn your vision into reality.
           </p>
           
@@ -230,7 +230,7 @@ const Index = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-            Join the growing number of startups and businesses who have transformed with Cofomo Tech over the past 2 years.
+            Join hundreds of forward-thinking companies who have already transformed their business with our solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
