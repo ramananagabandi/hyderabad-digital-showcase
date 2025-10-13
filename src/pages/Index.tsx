@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Sparkles, Rocket, Target, TrendingUp, ChevronRight, Lightbulb, Zap, Shield, Users2, BarChart3, Database, Layout, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GalaxyBackground } from "@/components/GalaxyBackground";
 
 const Index = () => {
   const metrics = [
@@ -42,48 +43,50 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-100 to-black">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Galaxy 3D Background */}
+        <GalaxyBackground />
+        
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-gray-200/50 to-black/90"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gray-300/30 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 z-[1]"></div>
         
         {/* Geometric patterns */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.3)_0%,transparent_50%)]"></div>
-          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.3)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 opacity-10 z-[1]">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.3)_0%,transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.3)_0%,transparent_50%)]"></div>
         </div>
 
         {/* Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:80px_80px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:80px_80px] z-[1]"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/40 backdrop-blur-md border border-black/10 mb-8 animate-fade-in shadow-lg">
-            <Sparkles className="w-5 h-5 text-black" />
-            <span className="text-sm font-semibold text-black tracking-wide">Cofomo Tech - A Startup Building Next-Gen Solutions</span>
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 animate-fade-in shadow-lg">
+            <Sparkles className="w-5 h-5 text-white" />
+            <span className="text-sm font-semibold text-white tracking-wide">Cofomo Tech - A Startup Building Next-Gen Solutions</span>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight animate-slide-up">
-            <span className="text-black">Build The</span>
+            <span className="text-white">Build The</span>
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-600 to-black">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400">
               Future Now
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
             As a startup founded 2 years ago, we craft powerful digital solutions that transform businesses and create lasting impact. 
             Partner with Cofomo Tech to turn your vision into reality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-fade-in">
             <Link to="/contact">
-              <Button size="lg" className="bg-black text-white hover:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold group">
+              <Button size="lg" className="bg-white text-black hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold group">
                 Get Started
                 <Rocket className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="border-2 border-black/30 text-black bg-white/50 hover:bg-black hover:text-white backdrop-blur-md transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold shadow-lg">
+              <Button size="lg" variant="outline" className="border-2 border-white/30 text-white bg-white/10 hover:bg-white hover:text-black backdrop-blur-md transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold shadow-lg">
                 Explore Solutions
                 <ChevronRight className="ml-2 w-6 h-6" />
               </Button>
