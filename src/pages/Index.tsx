@@ -42,42 +42,48 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-black overflow-hidden">
-        {/* Animated grid background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-100 to-black">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-gray-200/50 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gray-300/30 to-black/70"></div>
         
-        {/* Spotlight effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl"></div>
+        {/* Geometric patterns */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.3)_0%,transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.3)_0%,transparent_50%)]"></div>
+        </div>
+
+        {/* Grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:80px_80px]"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-white" />
-            <span className="text-sm font-semibold text-white tracking-wide">Next-Generation Technology Solutions</span>
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/40 backdrop-blur-md border border-black/10 mb-8 animate-fade-in shadow-lg">
+            <Sparkles className="w-5 h-5 text-black" />
+            <span className="text-sm font-semibold text-black tracking-wide">Next-Generation Technology Solutions</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-tight animate-slide-up">
-            Build The
+          <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight animate-slide-up">
+            <span className="text-black">Build The</span>
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-600 to-black">
               Future Now
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-light">
+          <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
             We craft powerful digital solutions that transform businesses and create lasting impact. 
             Partner with us to turn your vision into reality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-fade-in">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-100 shadow-elegant transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold group">
+              <Button size="lg" className="bg-black text-white hover:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold group">
                 Get Started
                 <Rocket className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="border-2 border-white/20 text-white hover:bg-white hover:text-black backdrop-blur-sm transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold">
+              <Button size="lg" variant="outline" className="border-2 border-black/30 text-black bg-white/50 hover:bg-black hover:text-white backdrop-blur-md transition-all duration-500 hover:scale-105 px-10 py-8 text-lg font-bold shadow-lg">
                 Explore Solutions
                 <ChevronRight className="ml-2 w-6 h-6" />
               </Button>
