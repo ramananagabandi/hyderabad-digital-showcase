@@ -1,6 +1,6 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Stars, Sphere } from '@react-three/drei';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 
 function FloatingOrb({ position, color, size = 1 }: { position: [number, number, number], color: string, size?: number }) {
@@ -38,28 +38,27 @@ function GalaxyParticles() {
   });
 
   const particlesCount = 200;
-  const positions = new Float32Array(particlesCount * 3);
   
-  for (let i = 0; i < particlesCount; i++) {
-    const radius = Math.random() * 10;
-    const theta = Math.random() * Math.PI * 2;
-    const phi = Math.random() * Math.PI;
+  const geometry = useMemo(() => {
+    const positions = new Float32Array(particlesCount * 3);
     
-    positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
-    positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
-    positions[i * 3 + 2] = radius * Math.cos(phi);
-  }
+    for (let i = 0; i < particlesCount; i++) {
+      const radius = Math.random() * 10;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.random() * Math.PI;
+      
+      positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
+      positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
+      positions[i * 3 + 2] = radius * Math.cos(phi);
+    }
+    
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    return geo;
+  }, []);
 
   return (
-    <points ref={particlesRef}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={particlesCount}
-          array={positions}
-          itemSize={3}
-        />
-      </bufferGeometry>
+    <points ref={particlesRef} geometry={geometry}>
       <pointsMaterial
         size={0.05}
         color="#ffffff"
