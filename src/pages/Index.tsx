@@ -2,45 +2,58 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Sparkles, Rocket, Target, TrendingUp, ChevronRight, Lightbulb, Zap, Shield, Users2, BarChart3, Database, Layout, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Index = () => {
-  const metrics = [
-    { number: "500+", label: "Projects Delivered", icon: <Target className="w-5 h-5" /> },
-    { number: "98%", label: "Client Satisfaction", icon: <Sparkles className="w-5 h-5" /> },
-    { number: "150+", label: "Global Partners", icon: <Users2 className="w-5 h-5" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-5 h-5" /> }
-  ];
-
-  const solutions = [
-    {
-      icon: <Database className="w-10 h-10" />,
-      title: "Data Intelligence",
-      description: "Transform raw data into actionable insights with our advanced analytics and AI-powered solutions.",
-      benefits: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"]
-    },
-    {
-      icon: <Layout className="w-10 h-10" />,
-      title: "Digital Products",
-      description: "Build exceptional web and mobile experiences that users love and businesses rely on.",
-      benefits: ["Custom Development", "UI/UX Design", "Cloud Integration"]
-    },
-    {
-      icon: <Workflow className="w-10 h-10" />,
-      title: "Process Automation",
-      description: "Streamline operations and boost efficiency with intelligent automation workflows.",
-      benefits: ["Workflow Design", "Integration Services", "Cost Reduction"]
-    }
-  ];
-
-  const features = [
-    { icon: <Lightbulb className="w-6 h-6" />, title: "Innovation First", description: "Cutting-edge solutions using the latest technologies" },
-    { icon: <Zap className="w-6 h-6" />, title: "Lightning Fast", description: "Rapid deployment without compromising quality" },
-    { icon: <Shield className="w-6 h-6" />, title: "Enterprise Security", description: "Bank-level security for your peace of mind" },
-    { icon: <BarChart3 className="w-6 h-6" />, title: "Data-Driven", description: "Every decision backed by solid analytics" }
-  ];
-
-  return (
-    <div className="min-h-screen overflow-hidden bg-background">
+  const metrics = [{
+    number: "500+",
+    label: "Projects Delivered",
+    icon: <Target className="w-5 h-5" />
+  }, {
+    number: "98%",
+    label: "Client Satisfaction",
+    icon: <Sparkles className="w-5 h-5" />
+  }, {
+    number: "150+",
+    label: "Global Partners",
+    icon: <Users2 className="w-5 h-5" />
+  }, {
+    number: "24/7",
+    label: "Support Available",
+    icon: <Shield className="w-5 h-5" />
+  }];
+  const solutions = [{
+    icon: <Database className="w-10 h-10" />,
+    title: "Data Intelligence",
+    description: "Transform raw data into actionable insights with our advanced analytics and AI-powered solutions.",
+    benefits: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"]
+  }, {
+    icon: <Layout className="w-10 h-10" />,
+    title: "Digital Products",
+    description: "Build exceptional web and mobile experiences that users love and businesses rely on.",
+    benefits: ["Custom Development", "UI/UX Design", "Cloud Integration"]
+  }, {
+    icon: <Workflow className="w-10 h-10" />,
+    title: "Process Automation",
+    description: "Streamline operations and boost efficiency with intelligent automation workflows.",
+    benefits: ["Workflow Design", "Integration Services", "Cost Reduction"]
+  }];
+  const features = [{
+    icon: <Lightbulb className="w-6 h-6" />,
+    title: "Innovation First",
+    description: "Cutting-edge solutions using the latest technologies"
+  }, {
+    icon: <Zap className="w-6 h-6" />,
+    title: "Lightning Fast",
+    description: "Rapid deployment without compromising quality"
+  }, {
+    icon: <Shield className="w-6 h-6" />,
+    title: "Enterprise Security",
+    description: "Bank-level security for your peace of mind"
+  }, {
+    icon: <BarChart3 className="w-6 h-6" />,
+    title: "Data-Driven",
+    description: "Every decision backed by solid analytics"
+  }];
+  return <div className="min-h-screen overflow-hidden bg-background">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-100 to-black">
         {/* Animated gradient overlay */}
@@ -93,27 +106,7 @@ const Index = () => {
       </section>
 
       {/* Metrics Section */}
-      <section className="py-24 bg-white relative border-b">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {metrics.map((metric, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex justify-center mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center shadow-card group-hover:shadow-hover transition-all duration-500 group-hover:scale-110">
-                    <div className="text-white">{metric.icon}</div>
-                  </div>
-                </div>
-                <div className="text-5xl md:text-6xl font-black text-black mb-2 group-hover:scale-110 transition-transform duration-500">
-                  {metric.number}
-                </div>
-                <div className="text-sm font-bold text-gray-500 uppercase tracking-wider">
-                  {metric.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Solutions Section */}
       <section className="py-32 bg-white relative overflow-hidden">
@@ -132,12 +125,9 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <Card 
-                key={index} 
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-black shadow-sm hover:shadow-xl transition-all duration-700 hover:-translate-y-4 bg-white animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
+            {solutions.map((solution, index) => <Card key={index} className="group relative overflow-hidden border-2 border-gray-200 hover:border-black shadow-sm hover:shadow-xl transition-all duration-700 hover:-translate-y-4 bg-white animate-fade-in" style={{
+            animationDelay: `${index * 0.2}s`
+          }}>
                 <CardContent className="relative p-10">
                   <div className="mb-6 inline-flex p-4 rounded-2xl bg-black shadow-card group-hover:shadow-hover transition-all duration-500 group-hover:scale-110">
                     <div className="text-white">{solution.icon}</div>
@@ -152,14 +142,12 @@ const Index = () => {
                   </p>
                   
                   <div className="space-y-3 mb-8">
-                    {solution.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-sm font-semibold text-black">
+                    {solution.benefits.map((benefit, idx) => <div key={idx} className="flex items-center gap-3 text-sm font-semibold text-black">
                         <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-black transition-all duration-300">
                           <ChevronRight className="w-4 h-4 text-black group-hover:text-white transition-colors" />
                         </div>
                         {benefit}
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                   
                   <Link to="/services" className="inline-flex items-center text-black hover:text-gray-600 font-bold group-hover:gap-3 gap-2 transition-all duration-300">
@@ -167,8 +155,7 @@ const Index = () => {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -190,11 +177,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="group p-8 rounded-3xl bg-white border-2 border-gray-200 hover:border-black transition-all duration-500 hover:shadow-hover hover:-translate-y-2"
-              >
+            {features.map((feature, index) => <div key={index} className="group p-8 rounded-3xl bg-white border-2 border-gray-200 hover:border-black transition-all duration-500 hover:shadow-hover hover:-translate-y-2">
                 <div className="w-16 h-16 rounded-2xl bg-black flex items-center justify-center shadow-card group-hover:shadow-hover transition-all duration-500 group-hover:scale-110 mb-6">
                   <div className="text-white">{feature.icon}</div>
                 </div>
@@ -204,8 +187,7 @@ const Index = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -249,8 +231,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
