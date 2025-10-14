@@ -9,9 +9,7 @@ const OurCompany = () => {
             <h1 className="text-5xl font-bold mb-6">
               Our Company
             </h1>
-            <p className="text-xl text-white/90 mb-8">
-              Founded in 2010, COFOMO Tech is an Indian leader in IT and business consulting services, dedicated to innovation and technological advancement.
-            </p>
+            <p className="text-xl text-white/90 mb-8">COFOMO Tech is an Indian leader in IT and business consulting services, dedicated to innovation and technological advancement.</p>
             <Button variant="secondary" size="lg" className="bg-accent text-primary hover:bg-accent/90">
               Learn More <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
