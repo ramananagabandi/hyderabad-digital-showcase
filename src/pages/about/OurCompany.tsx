@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Target, Award } from "lucide-react";
-
 const OurCompany = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-primary text-white py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -26,20 +24,20 @@ const OurCompany = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="p-8">
-              <div className="text-4xl font-bold text-primary mb-2">3,000+</div>
-              <div className="text-muted-foreground">Experts</div>
+              <div className="text-4xl font-bold text-primary mb-2">2+</div>
+              <div className="text-muted-foreground">Years of Innovation</div>
             </div>
             <div className="p-8">
-              <div className="text-4xl font-bold text-primary mb-2">400+</div>
-              <div className="text-muted-foreground">Architects</div>
+              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-muted-foreground">Projects Delivered</div>
             </div>
             <div className="p-8">
-              <div className="text-4xl font-bold text-primary mb-2">300+</div>
-              <div className="text-muted-foreground">Institutional Clients</div>
+              <div className="text-4xl font-bold text-primary mb-2">30+</div>
+              <div className="text-muted-foreground">Happy Clients</div>
             </div>
             <div className="p-8">
-              <div className="text-4xl font-bold text-primary mb-2">30</div>
-              <div className="text-muted-foreground">Years in Business</div>
+              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-muted-foreground">Support Available</div>
             </div>
           </div>
         </div>
@@ -84,62 +82,7 @@ const OurCompany = () => {
       </section>
 
       {/* History */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Journey</h2>
-          <div className="space-y-8">
-            <div className="flex gap-8">
-              <div className="flex-shrink-0 w-20 text-right">
-                <div className="text-2xl font-bold text-primary">1995</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">Company Founded</h3>
-                <p className="text-muted-foreground">
-                  COFOMO Tech was established with a vision to provide innovative IT consulting services to Indian businesses.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-8">
-              <div className="flex-shrink-0 w-20 text-right">
-                <div className="text-2xl font-bold text-primary">2000</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">Expansion</h3>
-                <p className="text-muted-foreground">
-                  Expanded our services to include enterprise solutions and began partnerships with major technology vendors.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-8">
-              <div className="flex-shrink-0 w-20 text-right">
-                <div className="text-2xl font-bold text-primary">2010</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">Cloud Leadership</h3>
-                <p className="text-muted-foreground">
-                  Became a pioneer in cloud technologies, helping organizations migrate to modern cloud platforms.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-8">
-              <div className="flex-shrink-0 w-20 text-right">
-                <div className="text-2xl font-bold text-primary">2020</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">Digital Transformation</h3>
-                <p className="text-muted-foreground">
-                  Focused on comprehensive digital transformation services, helping businesses adapt to the digital age.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+      
+    </div>;
 };
-
 export default OurCompany;
