@@ -50,11 +50,10 @@ const Navigation = () => {
     name: "Manufacturing",
     path: "/industries/manufacturing"
   }];
-  const aboutDropdown = [{
-    name: "Our Company",
-    path: "/about/our-company"
-  }];
   const navItems = [{
+    name: "ABOUT",
+    path: "/about"
+  }, {
     name: "CAREERS",
     path: "/careers"
   }, {
@@ -110,20 +109,6 @@ const Navigation = () => {
             <Link to="/technologies" className={`text-sm font-medium transition-colors hover:text-primary/80 ${isActive("/technologies") ? "text-primary" : "text-primary/90"}`}>
               TECHNOLOGIES
             </Link>
-
-            {/* About Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium text-primary/90 hover:text-primary flex items-center gap-1">
-                ABOUT <ChevronDown className="w-4 h-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white">
-                {aboutDropdown.map(item => <DropdownMenuItem key={item.name} asChild>
-                    <Link to={item.path} className="text-primary hover:text-primary/80">
-                      {item.name}
-                    </Link>
-                  </DropdownMenuItem>)}
-              </DropdownMenuContent>
-            </DropdownMenu>
 
             {navItems.map(item => <Link key={item.name} to={item.path} className={`text-sm font-medium transition-colors hover:text-primary/80 ${isActive(item.path) ? "text-primary" : "text-primary/90"}`}>
                 {item.name}
