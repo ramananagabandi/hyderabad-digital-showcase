@@ -53,15 +53,6 @@ const Navigation = () => {
   const aboutDropdown = [{
     name: "Our Company",
     path: "/about/our-company"
-  }, {
-    name: "Leadership Team",
-    path: "/about/leadership"
-  }, {
-    name: "Awards & Recognition",
-    path: "/about/awards"
-  }, {
-    name: "Technology Partners",
-    path: "/about/partners"
   }];
   const navItems = [{
     name: "CAREERS",
