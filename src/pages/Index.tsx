@@ -6,9 +6,9 @@ import { GalaxyBackground } from "@/components/GalaxyBackground";
 
 const Index = () => {
   const metrics = [
-    { number: "2+", label: "Years of Innovation", icon: <Target className="w-5 h-5" /> },
-    { number: "50+", label: "Projects Completed", icon: <Sparkles className="w-5 h-5" /> },
-    { number: "30+", label: "Happy Clients", icon: <Users2 className="w-5 h-5" /> },
+    { number: "5+", label: "Years of Innovation", icon: <Target className="w-5 h-5" /> },
+    { number: "70+", label: "Projects Completed", icon: <Sparkles className="w-5 h-5" /> },
+    { number: "33+", label: "Happy Clients", icon: <Users2 className="w-5 h-5" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-5 h-5" /> }
   ];
 
