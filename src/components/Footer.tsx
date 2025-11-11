@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-white/80 text-sm">
-            © 2024 COFOMO Tech Private Limited. All rights reserved. | 100+ Clients Served | 200+ Projects Delivered
+            © 2024 COFOMO Tech Private Limited. All rights reserved. | 33+ Clients Served | 70+ Projects Delivered
           </p>
         </div>
       </div>
