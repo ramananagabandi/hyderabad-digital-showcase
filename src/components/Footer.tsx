@@ -8,11 +8,7 @@ const Footer = () => {
         <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/6ca34434-3564-40a1-b874-3854639d51c6.png" 
-                  alt="Cofomo Tech Logo" 
-                  className="w-10 h-10 object-contain"
-                />
+                <img src="/lovable-uploads/6ca34434-3564-40a1-b874-3854639d51c6.png" alt="Cofomo Tech Logo" className="w-10 h-10 object-contain" />
               </div>
               <span className="text-xl font-bold">COFOMO Tech</span>
             </Link>
@@ -80,9 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-white/80 text-sm">
-            © 2024 COFOMO Tech Private Limited. All rights reserved. | 33+ Clients Served | 70+ Projects Delivered
-          </p>
+          <p className="text-white/80 text-sm">© 2025 COFOMO Tech Private Limited. All rights reserved. | 33+ Clients Served | 70+ Projects Delivered</p>
         </div>
       </div>
     </footer>;
