@@ -241,7 +241,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/about">
-              <Button size="lg" variant="outline" className="border-2 border-white/20 text-white hover:bg-white hover:text-black backdrop-blur-sm transition-all duration-500 hover:scale-105 px-12 py-8 text-lg font-bold">
+              <Button size="lg" className="bg-white text-black hover:bg-gray-100 px-12 py-8 text-lg font-bold">
                 Learn About Us
                 <ChevronRight className="ml-2 w-6 h-6" />
               </Button>
